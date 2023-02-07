@@ -20,10 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
         div.appendChild(btn)
 
         btn.innerText = "Like"
-        h2.innerText = 
-        // img.src = [toy_image_url]
+        h2.innerText = toyObj.name
+        img.src = toyObj.image
+        img.className = "toy-avatar"
         // console.log(h2)
-        // p.innerText = 
+        btn.addEventListener('click', function likes(e) {
+          e.preventDefault()
+          p.innerText = `${0} Likes`
+          const addLikes = p.innerText++
+        })
 
       })
     })  
